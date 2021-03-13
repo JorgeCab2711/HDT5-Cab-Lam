@@ -49,10 +49,10 @@ def proc (env,nombre,ram,cpu,Cram,instrucciones,numi,tiempo,total):
 env = simpy.Environment()
 ram = simpy.Container(env, init=100,capacity=100)
 total = simpy.Container(env,capacity=1000000000000000000000000)
-cpu = simpy.Resource(env, capacity= 1)
+cpu = simpy.Resource(env, capacity= 2)
 
 #NUMERO DE PROCESOS --------------------------------------------------------------
-procesos = 10
+procesos = 25
 
 for i in range(procesos):
     t1=random.randint(1,10)
